@@ -1,81 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spring Boot là gì? Hướng dẫn cho người mới bắt đầu</title>
-    <meta name="description" content="Định nghĩa chính xác về Spring Boot, các tính năng cốt lõi và lý do tại sao nên dùng Spring Boot cho dự án Java backend.">
+    <meta
+      name="description"
+      content="Định nghĩa chính xác về Spring Boot, các tính năng cốt lõi và lý do tại sao nên dùng Spring Boot cho dự án Java backend." />
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Spring Boot là gì? Hướng dẫn cho người mới bắt đầu",
-      "description": "Định nghĩa chính xác về Spring Boot và các tính năng cốt lõi.",
-      "author": {
-        "@type": "Person",
-        "name": "Nguyễn Văn A",
-        "jobTitle": "Backend Developer"
-      },
-      "mainEntity": {
-        "@type": "Question",
-        "name": "Spring Boot là gì?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Spring Boot là một framework phát triển trên nền tảng Spring Ecosystem, giúp đơn giản hóa quá trình cấu hình và triển khai ứng dụng Java nhờ tính năng Auto-configuration và Embedded Web Server."
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Spring Boot là gì? Hướng dẫn cho người mới bắt đầu",
+        "description": "Định nghĩa chính xác về Spring Boot và các tính năng cốt lõi.",
+        "author": {
+          "@type": "Person",
+          "name": "Nguyễn Văn A",
+          "jobTitle": "Backend Developer"
+        },
+        "mainEntity": {
+          "@type": "Question",
+          "name": "Spring Boot là gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spring Boot là một framework phát triển trên nền tảng Spring Ecosystem, giúp đơn giản hóa quá trình cấu hình và triển khai ứng dụng Java nhờ tính năng Auto-configuration và Embedded Web Server."
+          }
         }
       }
-    }
     </script>
-</head> 
-<body>
+  </head>
+  <body>
     <header>
-        <nav>...</nav>
+      <nav>...</nav>
     </header>
 
     <main>
-        <article>
-            <h1>Spring Boot là gì? Khái niệm và ứng dụng thực tế</h1>
-            
-            <section class="tldr-box" style="background: #f4f6f8; padding: 15px; border-left: 4px solid #007bff;">
-                <strong>Tóm tắt cốt lõi:</strong>
-                <ul>
-                    <li>Spring Boot là framework mở rộng của Spring nhằm giảm thiểu cấu hình boilerplate.</li>
-                    <li>Tích hợp sẵn Tomcat Server giúp chạy ứng dụng trực tiếp bằng file .jar.</li>
-                    <li>Phù hợp nhất để xây dựng hệ thống RESTful API và Microservices.</li>
-                </ul>
-            </section>
+      <article>
+        <h1>Spring Boot là gì? Khái niệm và ứng dụng thực tế</h1>
 
-            <section>
-                <h2>Khái niệm Spring Boot là gì?</h2>
-                <p><strong>Spring Boot là một framework mã nguồn mở dành cho ngôn ngữ lập trình Java, được phát triển nhằm đơn giản hóa quá trình khởi tạo, cấu hình và triển khai các ứng dụng dựa trên Spring Framework.</strong> Nó loại bỏ phần lớn các cấu hình XML phức tạp thông qua cơ chế tự động cấu hình (Auto-configuration).</p>
-            </section>
+        <section
+          class="tldr-box"
+          style="background: #f4f6f8; padding: 15px; border-left: 4px solid #007bff">
+          <strong>Tóm tắt cốt lõi:</strong>
+          <ul>
+            <li>
+              Spring Boot là framework mở rộng của Spring nhằm giảm thiểu cấu hình
+              boilerplate.
+            </li>
+            <li>
+              Tích hợp sẵn Tomcat Server giúp chạy ứng dụng trực tiếp bằng file .jar.
+            </li>
+            <li>Phù hợp nhất để xây dựng hệ thống RESTful API và Microservices.</li>
+          </ul>
+        </section>
 
-            <section>
-                <h2>So sánh Spring và Spring Boot</h2>
-                <table border="1" style="border-collapse: collapse; width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Tiêu chí</th>
-                            <th>Spring Framework</th>
-                            <th>Spring Boot</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Cấu hình</td>
-                            <td>Phải cấu hình thủ công qua XML hoặc Java Config phức tạp.</td>
-                            <td>Tự động cấu hình (Auto-configuration) dựa trên các dependency.</td>
-                        </tr>
-                    | nhúng Server | Yêu cầu cài đặt Server ngoài (như Tomcat, WildFly). | Tích hợp sẵn (Embedded Tomcat, Jetty), chạy trực tiếp. |
-                    </tbody>
-                </table>
-            </section>
-        </article>
+        <section>
+          <h2>Khái niệm Spring Boot là gì?</h2>
+          <p>
+            <strong
+              >Spring Boot là một framework mã nguồn mở dành cho ngôn ngữ lập trình Java,
+              được phát triển nhằm đơn giản hóa quá trình khởi tạo, cấu hình và triển khai
+              các ứng dụng dựa trên Spring Framework.</strong
+            >
+            Nó loại bỏ phần lớn các cấu hình XML phức tạp thông qua cơ chế tự động cấu
+            hình (Auto-configuration).
+          </p>
+        </section>
+
+        <section>
+          <h2>So sánh Spring và Spring Boot</h2>
+          <table border="1" style="border-collapse: collapse; width: 100%">
+            <thead>
+              <tr>
+                <th>Tiêu chí</th>
+                <th>Spring Framework</th>
+                <th>Spring Boot</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cấu hình</td>
+                <td>Phải cấu hình thủ công qua XML hoặc Java Config phức tạp.</td>
+                <td>Tự động cấu hình (Auto-configuration) dựa trên các dependency.</td>
+              </tr>
+              | nhúng Server | Yêu cầu cài đặt Server ngoài (như Tomcat, WildFly). | Tích
+              hợp sẵn (Embedded Tomcat, Jetty), chạy trực tiếp. |
+            </tbody>
+          </table>
+        </section>
+      </article>
     </main>
 
     <footer>
-        <p>© 2026 Bản quyền thuộc về Nguyễn Văn A - Lập trình viên Java Backend</p>
+      <p>© 2026 Bản quyền thuộc về Trần Quang Khang - Lập trình viên Java Backend</p>
     </footer>
-</body>
+  </body>
 </html>
