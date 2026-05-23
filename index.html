@@ -3,73 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
     <title>Spring Boot là gì? Hướng dẫn cho người mới bắt đầu</title>
+
     <meta
       name="description"
-      content="Định nghĩa chính xác về Spring Boot, các tính năng cốt lõi và lý do tại sao nên dùng Spring Boot cho dự án Java backend." />
+      content="Tìm hiểu Spring Boot là gì, cách hoạt động, ưu điểm, tính năng Auto-configuration và lý do tại sao Spring Boot được dùng phổ biến trong Java Backend." />
 
+    <meta
+      name="keywords"
+      content="Spring Boot, Java Backend, Spring Framework, REST API, Microservices" />
+
+    <link rel="canonical" href="https://test-nu-ruddy-43.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Spring Boot là gì? Hướng dẫn cho người mới bắt đầu" />
+    <meta
+      property="og:description"
+      content="Khái niệm Spring Boot, ưu điểm và ứng dụng thực tế trong Java Backend." />
+    <meta property="og:url" content="https://test-nu-ruddy-43.vercel.app/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Spring Boot là gì? Hướng dẫn cho người mới bắt đầu" />
+    <meta
+      name="twitter:description"
+      content="Tìm hiểu Spring Boot dành cho người mới học Java Backend." />
+
+    <!-- Structured Data: TechArticle -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "headline": "Spring Boot là gì? Hướng dẫn cho người mới bắt đầu 2000",
+        "headline": "Spring Boot là gì? Hướng dẫn cho người mới bắt đầu",
         "description": "Định nghĩa chính xác về Spring Boot và các tính năng cốt lõi.",
         "author": {
           "@type": "Person",
           "name": "Trần Quang Khang",
           "jobTitle": "Backend Developer"
         },
-        "mainEntity": {
-          "@type": "Question",
-          "name": "Spring Boot là gì?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Spring Boot là một framework phát triển trên nền tảng Spring Ecosystem, giúp đơn giản hóa quá trình cấu hình và triển khai ứng dụng Java nhờ tính năng Auto-configuration và Embedded Web Server."
-          }
+        "publisher": {
+          "@type": "Organization",
+          "name": "Khang Dev Blog"
+        },
+        "datePublished": "2026-05-23",
+        "dateModified": "2026-05-23",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://test-nu-ruddy-43.vercel.app/"
         }
       }
     </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Spring Boot là gì?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Spring Boot là framework phát triển trên nền tảng Spring Ecosystem giúp đơn giản hóa quá trình cấu hình và triển khai ứng dụng Java nhờ Auto-configuration và Embedded Web Server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Spring Boot dùng để làm gì?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Spring Boot thường được sử dụng để xây dựng RESTful API, hệ thống Microservices và ứng dụng Java Backend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tại sao nên dùng Spring Boot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Spring Boot giúp giảm cấu hình phức tạp, tích hợp Embedded Server và tăng tốc quá trình phát triển ứng dụng Java."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
+
   <body>
     <header>
-      <nav>...</nav>
+      <nav>
+        <a href="/">Trang chủ</a>
+      </nav>
     </header>
 
     <main>
       <article>
-        <h1>Spring Boot là gì? Khái niệm và ứng dụng thực tế</h1>
+        <header>
+          <h1>Spring Boot là gì? Khái niệm và ứng dụng thực tế</h1>
 
+          <p>
+            Spring Boot là framework Java giúp xây dựng ứng dụng backend nhanh hơn nhờ khả
+            năng Auto-configuration và tích hợp sẵn Embedded Server.
+          </p>
+        </header>
+
+        <!-- TL;DR -->
         <section
-          class="tldr-box"
-          style="background: #f4f6f8; padding: 15px; border-left: 4px solid #007bff">
+          aria-label="Tóm tắt nhanh"
+          style="
+            background: #f4f6f8;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 20px;
+          ">
           <strong>Tóm tắt cốt lõi:</strong>
+
           <ul>
-            <li>
-              Spring Boot là framework mở rộng của Spring nhằm giảm thiểu cấu hình
-              boilerplate.
-            </li>
-            <li>
-              Tích hợp sẵn Tomcat Server giúp chạy ứng dụng trực tiếp bằng file .jar.
-            </li>
-            <li>Phù hợp nhất để xây dựng hệ thống RESTful API và Microservices.</li>
+            <li>Spring Boot giúp giảm cấu hình boilerplate trong Spring Framework.</li>
+
+            <li>Tích hợp sẵn Embedded Tomcat giúp chạy trực tiếp bằng file .jar.</li>
+
+            <li>Phù hợp để phát triển RESTful API và hệ thống Microservices.</li>
           </ul>
         </section>
 
+        <!-- Section -->
         <section>
           <h2>Khái niệm Spring Boot là gì?</h2>
+
           <p>
-            <strong
-              >Spring Boot là một framework mã nguồn mở dành cho ngôn ngữ lập trình Java,
-              được phát triển nhằm đơn giản hóa quá trình khởi tạo, cấu hình và triển khai
-              các ứng dụng dựa trên Spring Framework.</strong
-            >
-            Nó loại bỏ phần lớn các cấu hình XML phức tạp thông qua cơ chế tự động cấu
-            hình (Auto-configuration).
+            <strong>
+              Spring Boot là framework mã nguồn mở dành cho Java được xây dựng trên nền
+              tảng Spring Framework nhằm đơn giản hóa quá trình khởi tạo, cấu hình và
+              triển khai ứng dụng backend.
+            </strong>
+          </p>
+
+          <p>
+            Framework này loại bỏ phần lớn cấu hình XML phức tạp thông qua cơ chế
+            Auto-configuration.
           </p>
         </section>
 
+        <!-- Comparison -->
         <section>
-          <h2>So sánh Spring và Spring Boot</h2>
+          <h2>So sánh Spring Framework và Spring Boot</h2>
+
           <table border="1" style="border-collapse: collapse; width: 100%">
             <thead>
               <tr>
@@ -78,22 +164,53 @@
                 <th>Spring Boot</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
                 <td>Cấu hình</td>
-                <td>Phải cấu hình thủ công qua XML hoặc Java Config phức tạp.</td>
-                <td>Tự động cấu hình (Auto-configuration) dựa trên các dependency.</td>
+
+                <td>Phải cấu hình thủ công qua XML hoặc Java Config.</td>
+
+                <td>Tự động cấu hình dựa trên dependency.</td>
               </tr>
-              | nhúng Server | Yêu cầu cài đặt Server ngoài (như Tomcat, WildFly). | Tích
-              hợp sẵn (Embedded Tomcat, Jetty), chạy trực tiếp. |
+
+              <tr>
+                <td>Server</td>
+
+                <td>Cần cài đặt Tomcat hoặc WildFly riêng.</td>
+
+                <td>Tích hợp Embedded Tomcat hoặc Jetty.</td>
+              </tr>
+
+              <tr>
+                <td>Triển khai</td>
+
+                <td>Phức tạp hơn.</td>
+
+                <td>Chạy trực tiếp bằng file .jar.</td>
+              </tr>
             </tbody>
           </table>
+        </section>
+
+        <!-- FAQ Visible -->
+        <section>
+          <h2>Câu hỏi thường gặp</h2>
+
+          <h3>Spring Boot có miễn phí không?</h3>
+          <p>Có. Spring Boot là framework mã nguồn mở hoàn toàn miễn phí.</p>
+
+          <h3>Spring Boot có phù hợp cho Microservices không?</h3>
+          <p>
+            Có. Spring Boot là một trong những framework phổ biến nhất để xây dựng hệ
+            thống Microservices bằng Java.
+          </p>
         </section>
       </article>
     </main>
 
     <footer>
-      <p>© 2026 Bản quyền thuộc về Trần Quang Khang - Lập trình viên Java Backend</p>
+      <p>© 2026 Bản quyền thuộc về Trần Quang Khang - Java Backend Developer</p>
     </footer>
   </body>
 </html>
